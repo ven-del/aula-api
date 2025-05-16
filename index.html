@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API IBGE - Estados e Municípios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #0066cc;
+            text-align: center;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        select {
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        #municipios {
+            display: none;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>API IBGE - Estados e Municípios do Brasil</h1>
+    
+    <div class="container">
+        <label for="estados">Selecione um estado:</label>
+        <select id="estados">
+            <option value="">Carregando estados...</option>
+        </select>
+        
+        <div id="municipios">
+            <label for="cidades">Selecione um município:</label>
+            <select id="cidades">
+                <option value="">Selecione um estado primeiro</option>
+            </select>
+        </div>
+        
+        <div class="info">
+            <h3>Informações selecionadas:</h3>
+            <div id="info-resultado"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
